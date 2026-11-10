@@ -27,8 +27,7 @@ Then turn each one on in **Menu → Extensions**. A new drop-in starts off.
 
 ## Requirements
 
-- Pi Pocket 0.28 or newer for Portfolio (it uses the session list that routes get).
-- Pi Pocket 0.14 or newer for Draw.
+- Pi Pocket 0.14 or newer for both. Portfolio's recent-chat suggestions need 0.28 or newer; Draw works from 0.14.
 - Draw's photo orientation uses ImageMagick (`magick`); without it the photo is sent as it is.
 - ComfyUI, or an OpenAI-compatible image API, for Draw. Nothing is downloaded by this repository.
 

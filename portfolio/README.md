@@ -22,7 +22,7 @@ portfolio_update project="Pi Pocket" status="active" next="Write the README"
 
 Copy `portfolio.ts` and `portfolio/` into `~/.pi-pocket/extensions/`, then turn Portfolio on in **Menu → Extensions**. Or install it from the gallery once its entry is merged.
 
-Requires **Pi Pocket 0.28.0** or newer: it reads the session list that a route gets from the app (`sessions()`). It does not read Pi Pocket's database.
+Requires **Pi Pocket 0.14.0** or newer. On 0.28 and newer it also suggests recent chats from the session list the app gives a route; older versions still work, with **Add a project**. It does not read Pi Pocket's database.
 
 ## State
 
