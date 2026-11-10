@@ -1,0 +1,4 @@
+node_modules/
+draw.json
+draw.json.*
+.DS_Store

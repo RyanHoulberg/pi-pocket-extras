@@ -1,0 +1,287 @@
+/* Draw's own looks. It loads into the app's cascade layer, so a theme can still win. */
+
+.x-draw {
+    display: grid;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    max-width: 44rem;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.x-draw-tabs {
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.25rem;
+    border-radius: 0.8rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+}
+
+.x-draw-tab {
+    flex: 1;
+    min-height: 42px;
+    border: 0;
+    border-radius: 0.6rem;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.x-draw-tab.on {
+    background: var(--bg);
+    color: var(--text);
+    box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.x-draw-form {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.x-draw-label {
+    display: grid;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* 16px, or a phone zooms the page when the field is tapped. */
+.x-draw-field {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    padding: 0.55rem 0.7rem;
+    border-radius: 0.7rem;
+    border: 1px solid var(--line);
+    background: var(--card);
+    color: var(--text);
+    font: inherit;
+    font-size: 16px;
+}
+
+textarea.x-draw-field {
+    resize: vertical;
+    line-height: 1.4;
+}
+
+.x-draw-range {
+    width: 100%;
+    min-height: 44px;
+    accent-color: var(--accent);
+}
+
+.x-draw-pairs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+    gap: 0.6rem;
+    margin-top: 0.6rem;
+}
+
+.x-draw-more summary {
+    cursor: pointer;
+    color: var(--muted);
+    padding: 0.4rem 0;
+}
+
+.x-draw-photo {
+    display: grid;
+    grid-template-columns: 84px 1fr;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 0.7rem;
+    border: 1px solid var(--line);
+    background: var(--card);
+}
+
+.x-draw-photo img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.x-draw-go {
+    min-height: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.x-draw-error {
+    color: var(--err);
+}
+
+.x-draw-result img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.8rem;
+    display: block;
+    background: var(--card);
+}
+
+.x-draw-search {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.x-draw-check {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    color: var(--muted);
+    min-height: 44px;
+}
+
+.x-draw-check input {
+    width: 1.15rem;
+    height: 1.15rem;
+}
+
+.x-draw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.6rem;
+}
+
+.x-draw-thumb {
+    margin: 0;
+    display: grid;
+    gap: 0.2rem;
+    min-width: 0;
+}
+
+.x-draw-thumb img,
+.x-draw-empty-tile {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 0.6rem;
+    background: var(--card);
+    display: block;
+    cursor: pointer;
+}
+
+.x-draw-empty-tile {
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-size: 0.75rem;
+    cursor: default;
+}
+
+.x-draw-stars {
+    display: flex;
+    justify-content: center;
+}
+
+.x-draw-star {
+    border: 0;
+    background: none;
+    padding: 0.15rem 0.05rem;
+    font-size: 1.05rem;
+    line-height: 1;
+    color: var(--line);
+    cursor: pointer;
+}
+
+.x-draw-star.on {
+    color: var(--warn);
+}
+
+.x-draw-full {
+    position: fixed;
+    inset: 0;
+    z-index: 60;
+    background: rgba(0, 0, 0, 0.82);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+
+.x-draw-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    min-height: 0;
+}
+
+.x-draw-full-bar {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.6rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.x-draw-full-bar > div {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.x-draw-job {
+    display: grid;
+    gap: 0.35rem;
+    padding: 0.7rem 0.8rem;
+    border-radius: 0.7rem;
+    border: 1px solid var(--line);
+    background: var(--card);
+}
+
+.x-draw-job-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.6rem;
+    align-items: baseline;
+}
+
+.x-draw-bar {
+    height: 0.6rem;
+    border-radius: 999px;
+    background: var(--bg);
+    overflow: hidden;
+}
+
+.x-draw-fill {
+    height: 100%;
+    border-radius: inherit;
+    background: var(--accent);
+    transition: width 1s linear;
+}
+
+.x-draw-setup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    max-width: 620px;
+}
+
+.x-draw-setup h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.x-draw-setup p {
+    margin: 0;
+    line-height: 1.45;
+}
+
+.x-draw-setup code {
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 1px 4px;
+    word-break: break-all;
+}
