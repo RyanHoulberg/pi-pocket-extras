@@ -216,7 +216,7 @@ async function health(cfg: Config, signal?: AbortSignal): Promise<Health> {
 
     if (backend.kind === "stink") {
         try {
-            const answer = await fetch(`${server}/health`, { signal: AbortSignal.timeout(5000) });
+            const answer = await fetch(`${server}/health`, { signal: AbortSignal.timeout(15000) });
 
             if (!answer.ok) return { ...OFFLINE, canEdit, reason: `The image server answered ${answer.status}.` };
 
